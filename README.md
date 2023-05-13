@@ -2,7 +2,7 @@
 
 <img width="1411" alt="reacttsImg1" src="https://github.com/kaimcfarlane/React_TS/assets/87865378/af418f15-b21b-4559-8cf7-02368a423881">
 
-React Time and Speed mini games to test a users reaction time and type speed.
+Here I created and published a desktop application designed to test users hand-eye reaction speed. With games that test your WPM (words per minute) and ability to click fast moving objects, this app was made to be a fun and enjoyable experience. Made with the Chart.js API.
 
 🚀 Test Live: https://kaimcfarlane.github.io/ReactTS/
 
