@@ -1,0 +1,12 @@
+@media (max-width: 450px) {
+  #canvasDiv {
+    min-width: 404px;
+    margin-top: 62px;
+  }
+  nav {
+    width: clamp(166px, 0vw, 10%);
+  }
+  h2::before {
+    opacity: 0%;
+  }
+}

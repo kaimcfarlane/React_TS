@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReactTS</title>
+    <script defer src="/scripts/dots.js"></script>
+    <script defer src="/scripts/reaction.js"></script>
+    <link rel="stylesheet" href="/views/index.css">
+    <link rel="stylesheet" href="/views/dots.css">
+    <link rel="stylesheet" href="/views/dotsMob.css">
+</head>
+<body>
+    <div class="area">
+        <ul class="circles">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+        <header id="header">
+            <h1 id="mainTitle">
+                Test Your DOTS Reaction Speed!
+            </h1>
+            <div id="dropdown">
+                    <button id="gameChoiceBtn" onclick="openList()"> 
+                                Choose a Game
+                    </button>
+                <div id="gameSelect" class="dropDownItems">
+                    <a href="/views/dots.html">DOTS</a>
+                    <a href="/views/typer.html">TYPER</a>
+                    <a href="/views/clicker.html">CLICKER</a>
+                </div>
+            </div>
+        </header>
+        <section id="game">
+            <header id="gameHeader">
+                <button id="startButton" onclick="startGame()">START</button>
+                <h1 id="userScore">SCORE</h1>
+                <h1 id="helpTitle" onclick="revealHelpText()">HELP</h1>
+            </header>
+            <text id="helpText">Click the green buttons as quick as possible, however don't click the red ones, they lose points! You have until Times Up!
+            </text>
+            <h2 id="time">TIME: 30</h2>
+            <ul class="dots">
+                <li onclick="score()" class="dot"></li>
+            </ul>
+        </section>
+        <div id="canvasDiv">
+            <canvas id="myChart"></canvas>
+          </div>
+          <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+          <script defer src="/scripts/chartDot.js"></script>        
+        </div >   
+    </div>
+</body>
+</html>

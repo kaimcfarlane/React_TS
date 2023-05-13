@@ -1,0 +1,28 @@
+@media (max-width: 450px) {
+  #canvasDiv {
+    min-width: 404px;
+    margin-top: -365px;
+  }
+
+  #hitBox {
+    margin: auto;
+    margin-top: 125px;
+    position: relative;
+    background-color: #ff8181;
+    display: none;
+    text-decoration: none;
+    color: #fff;
+    width: 118px;
+    padding: 107px;
+    line-height: 120px;
+    border-radius: 50%;
+    text-align: center;
+    font-weight: bold;
+    vertical-align: middle;
+    overflow: hidden;
+    box-shadow: 0px 2px 2px rgb(0 0 0 / 29%);
+    border-bottom: solid 3px #bd6565;
+    transition: 0.1s;
+    font-size: 100px;
+  }
+}

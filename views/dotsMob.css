@@ -1,0 +1,6 @@
+@media (max-width: 450px) {
+  #canvasDiv {
+    min-width: 404px;
+    margin-top: 62px;
+  }
+}

@@ -1,0 +1,230 @@
+body {
+  background-color: white;
+}
+
+#mainTitle {
+  text-align: center;
+  padding-top: 20px;
+  font-size: 32px;
+}
+
+#gameChoiceBtn {
+  color: aliceblue;
+  font-size: 20px;
+  background-color: black;
+  font-family: "Exo", sans-serif;
+  cursor: pointer;
+  margin-top: 20px;
+  border-radius: 4px;
+  padding: 3px;
+  position: relative;
+}
+
+.dropDownItems {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 152.3px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 2;
+}
+
+.area {
+  background: #18b2ad;
+  background: -webkit-linear-gradient(to left, #8f94fb, #4e54c8);
+  width: 100%;
+  height: 100vh;
+}
+
+.circles li {
+  position: absolute;
+  display: block;
+  list-style: none;
+  width: 20px;
+  height: 20px;
+  background: rgb(248 248 248 / 53%);
+  animation: animate 25s linear infinite;
+  bottom: -150px;
+}
+
+@keyframes animate {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+    border-radius: 50%;
+  }
+
+  100% {
+    transform: translateY(-1000px) rotate(720deg);
+    opacity: 0;
+    border-radius: 100%;
+  }
+}
+
+#game {
+  position: relative;
+  margin-top: 25px;
+  background-color: rgba(255, 255, 255, 0.358);
+}
+
+#gameHeader {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  box-shadow: 0 0 0.25em rgb(0 0 0 / 25%);
+}
+
+#startButton {
+  cursor: pointer;
+}
+
+#startButton {
+  box-sizing: border-box;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: 2px solid #e74c3c;
+  border-radius: 0.6em;
+  color: #e74c3c;
+  cursor: pointer;
+  display: flex;
+  align-self: center;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1;
+  padding: 5.2px 25.8px;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+#startButton:hover,
+#startButton:focus {
+  color: #fff;
+  outline: 0;
+}
+
+#startButton {
+  transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
+}
+#startButton:hover {
+  box-shadow: 0 0 40px 40px #e74c3c inset;
+}
+
+#clickArea {
+  margin: 0;
+  padding: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+#helpText {
+  text-align: center;
+  display: none;
+}
+
+#helpTitle {
+  cursor: pointer;
+  text-shadow: 0 0 rgb(255, 255, 255), 0 1.2em #18b2ad;
+  overflow: hidden;
+  color: rgba(255, 255, 255, 0);
+  transition: 0.3s;
+  padding: 0 0.1em;
+  margin: 0;
+}
+
+#helpTitle:hover {
+  text-shadow: 0 -1.2em rgb(255, 255, 255), 0 0#18b2ad;
+}
+
+#time {
+  text-align: center;
+
+  display: none;
+}
+
+#hitBox {
+  margin: auto;
+  margin-top: 100px;
+  position: relative;
+  background-color: #ff8181;
+  display: none;
+  text-decoration: none;
+  color: #fff;
+  width: 141px;
+  padding: 200px;
+  line-height: 120px;
+  border-radius: 50%;
+  text-align: center;
+  font-weight: bold;
+  vertical-align: middle;
+  overflow: hidden;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.29);
+  border-bottom: solid 3px #bd6565;
+  transition: 0.1s;
+  font-size: 100px;
+}
+
+.fadeout {
+  transition: visibility 0s 2s, opacity 2s linear;
+}
+
+#hitBox:active {
+  -ms-transform: translateY(2px);
+  -webkit-transform: translateY(2px);
+  transform: translateY(2px);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.15);
+  border-bottom: none;
+}
+
+#hitBox:focus {
+  background-color: #ffe733;
+}
+
+#hitBoxText {
+  margin-left: -60px;
+}
+
+#check {
+  width: 42px;
+  height: 42px;
+  display: none;
+  margin-left: 19px;
+  position: relative;
+}
+
+#myChart {
+  background: aliceblue;
+  margin-top: 100px;
+  margin-left: 15px;
+  margin-right: 15px;
+  border: #28313b;
+  border-width: 2px;
+  border-radius: 4px;
+  border-style: solid;
+  position: relative;
+}
+
+#canvasDiv {
+  max-width: 50%;
+  min-width: 745px;
+  max-width: 745px;
+  margin: auto;
+  overflow: hidden;
+  display: none;
+  position: absolute;
+  margin-top: -546px;
+  left: 0;
+  right: 0;
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 100%;
+  }
+  to {
+    opacity: 25%;
+  }
+}

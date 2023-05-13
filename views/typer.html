@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReactTS</title>
+    <script defer src="/scripts/reaction.js"></script>
+    <script defer src="/scripts/typer.js"></script>
+    <link rel="stylesheet" href="/views/index.css">
+    <link rel="stylesheet" href="/views/typer.css">
+    <link rel="stylesheet" href="/views/typerMob.css">
+</head>
+<body>
+    <div class="area" id="background">
+        <ul class="circles" id="floatyCircles">
+            <li>
+                <img class="img" src="/public/musicLogo1.png" alt="">
+                <img class="img2" src="/public/apple.png" alt="">
+                <div class="word">String</div>
+            </li>
+            <li>
+                <img class="img" src="/public/musicLogo2.png" alt="">
+                <img class="img2" id="banana" src="/public/banana.png" alt="">
+                <div class="word">Listen</div>
+            </li>
+            <li>
+                <img class="img" id="keyboard" src="/public/musicLogo3.png" alt="">
+                <img class="img2" id="carrot" src="/public/carrot1.png" alt="">
+                <div class="word">KeyBoard</div>
+            </li>
+            <li>
+                <img class="img" src="/public/musicLogo4.png" alt="">
+                <img class="img2" id="diamond" src="/public/diamond.png" alt="">
+                <div class="word">Cloud</div>
+            </li>
+            <li>
+                <img class="img" src="/public/musicLogo5.png" alt="">
+                <img class="img2" src="/public/earth1.png" alt="">
+                <div class="word">Piano</div>
+            </li>
+            <li>
+                <img class="img" id="headset" src="/public/musicLogo6.png" alt="">
+                <img class="img2" id="fire" src="/public/fire.png" alt="">
+                <div class="word">Headset</div>
+            </li>
+            <li>
+                <img class="img" src="/public/musicLogo7.png" alt="">
+                <img class="img2" id="gorilla" src="/public/gorilla1.png" alt="">
+                <div class="word">Note</div>
+            </li>
+            <li>
+                <img class="img" id="sound" src="/public/musicLogo8.png" alt="">
+                <img class="img2" id="helmet" src="/public/helmet.png" alt="">
+                <div class="word">Sound</div>
+            </li>
+            <li>
+                <img class="img" id="volume" src="/public/musicLogo10.png" alt="">
+                 <img class="img2" id="iceberg" src="/public/iceberg.png" alt="">
+                 <div class="word">Volume</div>
+            </li>
+            <li>
+                <img class="img" src="/public/musicLogo11.png" alt="">
+                <img class="img2" id="jackal" src="/public/jackal.png" alt="">
+                <div class="word">Jackal</div>
+            </li>          
+    </ul>
+        <header id="header">
+            <h1 id="mainTitle">
+                Test Your TYPER Reaction Speed!
+            </h1>
+            <ul class="tg-list">
+                <li class="tg-list-item">
+                    <h4>MODE</h4>
+                    <input class="tgl tgl-flip" id="cb5" type="checkbox" onclick="gameModeSelect()"/>
+                    <label class="tgl-btn" data-tg-off="MUSIC" data-tg-on="STORY" for="cb5"></label>
+                  </li>
+            </ul>
+            <div id="dropdown">
+                <button id="gameChoiceBtn" onclick="openList()"> 
+                            Choose a Game
+                </button>
+                <div id="gameSelect" class="dropDownItems">
+                    <a href="/views/dots.html">DOTS</a>
+                    <a href="/views/typer.html">TYPER</a>
+                    <a href="/views/clicker.html">CLICKER</a>
+                </div>
+            </div>
+        </header>    
+        <section id="game">
+            <header id="gameHeader">
+                <button id="startButton" onclick="startGame()">START</button>
+                <nav>
+                    <input id="toggle" type="checkbox" checked>
+                   <h2>Difficulty</h2>
+                 <ul>
+                   <li><a href="#" class="difficultyChoice" onclick="chooseDifEasy()">EASY</a></li>
+                   <li><a href="#" class="difficultyChoice" onclick="chooseDifMed()">MEDIUM</a></li>
+                   <li><a href="#" class="difficultyChoice" onclick="chooseDifHard()">HARD</a></li>
+                 </ul>
+              </nav>           
+                <h1 id="helpTitle" onclick="revealHelpText()">HELP</h1>
+            </header>
+            <text id="helpText">Pick whether you want to write a story or a song in "MODE", then your difficulty. Hit START and type away, you have 60 seconds to type as fast as possible
+                <br>LPM = Letters Per Minute
+                <br>WPM = Words Per Minute
+            </text>
+            <h2 id="time">TIME: 60</h2>
+            <div id="clickArea"></div>
+        </section>
+    <div id="bigGameContent">
+        <div id="gameContent">
+            <header id="gameContentHeader">
+              <h2 class="scoreCounter" id="LPM">LPM</h2>
+              <h2 class="scoreCounter" id="Score">SCORE</h2>
+              <h2 class="scoreCounter" id="WPM">WPM</h2>
+            </header>
+            <section id="typeSpace">
+                <p id="genText">
+                    Welcome
+                </p>
+                <textarea id="typeBox" placeholder="Start Typing"></textarea>
+                <form action="">
+                    <label class="">
+                      <input type="checkbox" name="checkbox" id="checkbox" onclick="lightMode()"/>
+                      DARK/LIGHT
+                    </label>
+            </section>
+        </div>
+    </div>
+    <div id="canvasDiv">
+        <canvas id="myChart"></canvas>
+      </div>
+      <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+      <script defer src="/scripts/chart.js"></script>        
+    </div >   
+</body>
+</html>
